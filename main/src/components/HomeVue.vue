@@ -10,9 +10,7 @@
     <div class="shape3">
       <img src="../assets/images/shape-3.svg" alt="">
     </div>
-    <div class="shape4">
-      <img src="../assets/images/shape-4.svg" alt="">
-    </div>
+
     <div class="container">
       <div class="text">
         <h3 class="title1">Creative Thinking</h3>
@@ -20,10 +18,12 @@
         <div class="contnet">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </div>
+        <button>Explore Now</button>
       </div>
       <div class="img-box" dir="rtl">
-        <img src="../assets/images/shape-6.svg" alt="" class="shape6">
-        <img src="../assets/images/shape-7.svg" alt="" class="shape7">
+        <img src="../assets/images/shape-4.svg" alt="" class="shape4">
+        <img src="../assets/images/shape-6.svg" alt="" class="shape6 shape-transaction">
+        <img src="../assets/images/shape-7.svg" alt="" class="shape7 shape-transaction">
         <img src="../assets/images/hero-1.png" alt="" class="img1">
         <img src="../assets/images/hero-2.png" alt="" class="img2">
         
@@ -84,6 +84,20 @@ export default {
   line-height: 30px;
   width: 75%;
 }
+.container button{
+  margin-left: 9.5%;
+  margin-top: 7.5%;
+  width: 150px;
+  height:50px;
+  font-family:Cool;
+  font-size: 1rem;
+  color:#fff;
+  text-align: center;
+  border:none;
+  border-radius: 50px;
+  background: linear-gradient(to right, rgb(39, 235, 137), rgb(84, 84, 248));
+
+}
 .img-box{
   display: flex;
   margin-right: 7%;
@@ -101,42 +115,56 @@ export default {
   height: 60%;
   border:10px solid rgb(61, 50, 50);
   border-radius: 118px;
-  box-shadow: -10px -20px rgba(92, 91, 91, 0.514);
-  /* border-top-left-radius:122px; */
-  /*border-top-right-radius:110px; */
+  box-shadow: -10px -20px rgba(92, 91, 91, 0.11);
+}
+.shape1,.shape2,.shape3,.shape4,.shape6,.shape7{
+  position: absolute;
 }
 .shape1{
-  position: absolute;
-  bottom: 0;
+  bottom: 50px;
   left:0;
   height: 80%;
 }
 .shape2{
-  position: absolute;
   top:0;
   right:0;
 }
-.shape3{
-  position: absolute;
-  top:20%;
-  left:0;
+.shape3,.shape4{
   opacity:0.2;
+}
+.shape3{
+  top:12%;
+  left:0;
 }
 .shape4{
-  position: absolute;
   right:16%;
   top:13%;
-  opacity:0.2;
   transform: rotate(110deg);
+  
 }
 .shape6{
-  position: absolute;
   right:25%;
   top:18%;
 }
 .shape7{
-  position: absolute;
   right:5%;
   top:22%;
+}
+@keyframes shake{
+  0% {
+    
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.shape-transaction{
+  animation: shake 2s;
 }
 </style>
