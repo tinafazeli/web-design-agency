@@ -24,11 +24,21 @@
         <img src="../assets/images/shape-4.svg" alt="" class="shape4">
         <img src="../assets/images/shape-6.svg" alt="" class="shape6 shape-transaction">
         <img src="../assets/images/shape-7.svg" alt="" class="shape7 shape-transaction">
-        <img src="../assets/images/hero-1.png" alt="" class="img1">
-        <img src="../assets/images/hero-2.png" alt="" class="img2">
-        
+        <img src="../assets/images/hero-1.png" alt="" class="img1 shape-transaction2">
+        <img src="../assets/images/hero-2.png" alt="" class="img2 shape-transaction">
+      </div>
+      <div class="scroll">
+        <img src="../assets/images/scroll-bg.svg" alt="" class="scroll-back">
+        <div class="scroll-icon">
+          <a href="#scroll-bottom">
+            <img src="../assets/images/scroll-icon.svg" alt="">
+          </a>
+        </div>
       </div>
     </div>
+    <secion id="scroll-bottom">
+
+    </secion>
   </div>
 </template>
 
@@ -38,7 +48,7 @@ export default {
   name:'NavbarView',
   components:{
     Navbar
-  } 
+  }
 }
 </script>
 
@@ -82,7 +92,7 @@ export default {
   margin-left: 9.5%;
   color: rgb(172, 170, 170);
   line-height: 30px;
-  width: 75%;
+  width: 70%;
 }
 .container button{
   margin-left: 9.5%;
@@ -97,6 +107,9 @@ export default {
   border-radius: 50px;
   background: linear-gradient(to right, rgb(39, 235, 137), rgb(84, 84, 248));
 
+}
+.container button:hover{
+  background: linear-gradient(to right,  rgb(84, 84, 248),rgb(39, 235, 137));  
 }
 .img-box{
   display: flex;
@@ -165,6 +178,37 @@ export default {
   }
 }
 .shape-transaction{
-  animation: shake 2s;
+  animation: shake 4s;
+}
+@keyframes shake2{
+  0% {
+    bottom:10px;
+    opacity: 0;
+  }
+  40% {
+    bottom:30px;
+    opacity: 1;
+  }
+  80%{
+    bottom:-20px;
+    opacity: 1;
+  }
+  100% {
+    bottom:-10px;
+  }
+}
+
+.shape-transaction2{
+  animation: shake2 5s;
+}
+.container .scroll{
+  position: absolute;
+  top:42.5rem;
+  left:50%;
+}
+.container .scroll-icon{
+  position: absolute;
+  top:3.2rem;
+  left:44%;
 }
 </style>
