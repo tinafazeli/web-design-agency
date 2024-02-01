@@ -29,15 +29,23 @@
       </div>
       <div class="scroll">
         <img src="../assets/images/scroll-bg.svg" alt="" class="scroll-back">
-        <div class="scroll-icon">
+        <div class="scroll-icon shape-transaction">
           <a href="#scroll-bottom">
             <img src="../assets/images/scroll-icon.svg" alt="">
           </a>
         </div>
       </div>
     </div>
-    <secion id="scroll-bottom">
-
+    <secion id="scroll-bottom" class="About-sec">
+      <div class="about-sec-shape-group">
+        <img src="../assets/images/about-1.png" alt="">
+        <img src="../assets/images/about-2.png" alt="">
+        <img src="../assets/images/about-3.png" alt="">
+        <img src="../assets/images/about-4.png" alt="">
+      </div>
+      <div class="about-sec-shape">
+        <img src="../assets/images/shape-37.svg" alt="" class="shape-transaction">
+      </div>
     </secion>
   </div>
 </template>
@@ -54,12 +62,7 @@ export default {
 
 
 <style scoped>
-/* .home{
-  background-image: url("../assets/images/shape-2.svg") !important;
-  background-repeat: no-repeat;
-  background-position-x: right;
-  
-} */
+
 .container{
   display: flex;
   margin-top: 5%;
@@ -210,5 +213,19 @@ export default {
   position: absolute;
   top:3.2rem;
   left:44%;
+}
+.About-sec{
+  margin-top: 79px;
+  background-color: #fff !important;
+  display:grid;
+  grid-template-columns: auto auto;
+  column-gap: 50px;
+}
+/* .about-sec-shape-group{
+  display: flex;
+} */
+.about-sec-shape img{
+  margin-top: 40px;
+  height: 55%;
 }
 </style>
