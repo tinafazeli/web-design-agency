@@ -38,10 +38,44 @@
     </div>
     <secion id="scroll-bottom" class="About-sec">
       <div class="about-sec-shape-group">
-        <img src="../assets/images/about-1.png" alt="">
+        <div class="circle-box">
+          <img src="../assets/images/ab-shape.svg" alt="" class="circle">
+          <div class="ab-circ">
+            <svg class="shape-1" viewBox="0 0 100 100" width="100" height="100">
+            <defs>
+                <path id="circle" d="
+                      M 50, 50
+                      m -37, 0
+                      a 37,37 0 1,1 74,0
+                      a 37,37 0 1,1 -74,0">
+                </path>
+            </defs>
+            <text font-size="15">
+                <textPath xlink:href="#circle" class="shape-1">
+                    Creative Minds_ Creative Minds_
+                </textPath>
+            </text>
+          </svg>
+          </div>
+        </div>
+        <div class="about-img-1">
+          <img src="../assets/images/about-1.png" alt="">
+        </div>
+        
         <img src="../assets/images/about-2.png" alt="">
         <img src="../assets/images/about-3.png" alt="">
         <img src="../assets/images/about-4.png" alt="">
+      </div>
+      <div v-motion-slide-visible-once-left >
+        <h3 class="titl">About Us</h3>
+        <h2 class="about-header">Making Your Business More Unique</h2>
+        <p class="about-paragraph">
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+
+          There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
+
+          by injected humour, or randomised words which don't look even slightly believable.
+        </p>
       </div>
       <div class="about-sec-shape">
         <img src="../assets/images/shape-37.svg" alt="" class="shape-transaction">
@@ -62,7 +96,17 @@ export default {
 
 
 <style scoped>
-
+#scroll-bottom .titl {
+  font-family:DreamyFont;
+  display: inline-block;
+  padding: 10px;
+  background: linear-gradient(to right, rgb(84, 84, 248), rgb(39, 235, 137));
+  background-clip:text;
+  -webkit-text-fill-color: transparent;
+  }
+.about-header{
+  color:rgb(31, 30, 30);
+}
 .container{
   display: flex;
   margin-top: 5%;
@@ -168,7 +212,6 @@ export default {
 }
 @keyframes shake{
   0% {
-    
     transform: scale(0.1);
     opacity: 0;
   }
@@ -182,6 +225,7 @@ export default {
 }
 .shape-transaction{
   animation: shake 4s;
+  animation-iteration-count: infinite;
 }
 @keyframes shake2{
   0% {
@@ -203,6 +247,7 @@ export default {
 
 .shape-transaction2{
   animation: shake2 5s;
+  animation-iteration-count: infinite;
 }
 .container .scroll{
   position: absolute;
@@ -224,8 +269,99 @@ export default {
 /* .about-sec-shape-group{
   display: flex;
 } */
+#scroll-bottom .titl {
+  font-family:DreamyFont;
+  display: inline-block;
+  padding: 10px;
+  background: linear-gradient(to right, rgb(84, 84, 248), rgb(39, 235, 137));
+  background-clip:text;
+  -webkit-text-fill-color: transparent;
+  }
+.about-header{
+  color:rgb(31, 30, 30);
+}
+.about-paragraph{
+  color:rgb(31, 30, 30);
+}
 .about-sec-shape img{
   margin-top: 40px;
   height: 55%;
+}
+.about-sec-shape-group{
+  display:flex;
+  width:100%;
+  margin-top: 40px;
+}
+.circle-box{
+  position:absolute;
+  border-radius: 50%;
+  left:40%;
+}
+.circle{
+  position: absolute;
+  top: 90%;
+  left: 20%;
+  /* transform: translate(-50%, -50%); */
+  max-width:250px;
+}
+.ab-circ{
+  background: rgba(228, 225, 255, 0.15) !important;
+  border-radius: 132px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #705fff;
+  padding:5px;
+}
+.ab-circ svg{
+  height: auto;
+  max-width: 120px;
+  fill:#5f39ff;
+  font-weight:700;
+}
+@keyframes rotateImage {
+  0%{
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100%{
+    webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.ab-circ .shape-1{
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+  z-index: 3;
+  -webkit-animation: rotateImage 10s infinite linear;
+  animation: rotateImage 10s infinite linear;
+}
+@keyframes trans {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+}
+
+100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+}
+.about-img-1{
+  position: absolute;
+  -webkit-animation: trans 2.5s ease-in-out infinite;
+  animation: trans 2.5s ease-in-out infinite;
+  border:1px solid #5f39ff;
+  border-radius: 50%;
+  padding: 8px;
+  left:20%;
+}
+.about-img-1 img{
+  width: 210px;
+  height: 210px;
 }
 </style>
