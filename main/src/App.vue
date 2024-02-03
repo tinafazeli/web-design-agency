@@ -31,6 +31,6 @@ body{
   color: #ffff;
   margin-top: 0px;
   margin:0px;
-  
+  overflow-x: hidden;
 }
 </style>

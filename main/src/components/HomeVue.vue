@@ -61,24 +61,32 @@
         <div class="about-img-1">
           <img src="../assets/images/about-1.png" alt="">
         </div>
-        
-        <img src="../assets/images/about-2.png" alt="">
-        <img src="../assets/images/about-3.png" alt="">
-        <img src="../assets/images/about-4.png" alt="">
+        <div class="about-img-2">
+          <img src="../assets/images/about-2.png" alt="">
+        </div>
+        <div class="about-img-3">
+          <img src="../assets/images/about-3.png" alt="">
+        </div>
+        <div class="about-img-4">
+          <img src="../assets/images/about-4.png" alt="">
+        </div>
       </div>
-      <div v-motion-slide-visible-once-left >
+      <div class="about-sec-shape">
+        <img src="../assets/images/shape-37.svg" alt="" class="shape-transaction">
+      </div>
+      <div v-motion-slide-visible-once-left class="about-text">
         <h3 class="titl">About Us</h3>
         <h2 class="about-header">Making Your Business More Unique</h2>
         <p class="about-paragraph">
           There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-
+        </p>
+        <p class="about-paragraph">
           There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
-
+        </p>
+        <p class="about-paragraph">
           by injected humour, or randomised words which don't look even slightly believable.
         </p>
-      </div>
-      <div class="about-sec-shape">
-        <img src="../assets/images/shape-37.svg" alt="" class="shape-transaction">
+        <button class="about-btn">Read More</button>
       </div>
     </secion>
   </div>
@@ -96,17 +104,6 @@ export default {
 
 
 <style scoped>
-#scroll-bottom .titl {
-  font-family:DreamyFont;
-  display: inline-block;
-  padding: 10px;
-  background: linear-gradient(to right, rgb(84, 84, 248), rgb(39, 235, 137));
-  background-clip:text;
-  -webkit-text-fill-color: transparent;
-  }
-.about-header{
-  color:rgb(31, 30, 30);
-}
 .container{
   display: flex;
   margin-top: 5%;
@@ -210,24 +207,11 @@ export default {
   right:5%;
   top:22%;
 }
-@keyframes shake{
-  0% {
-    transform: scale(0.1);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+
 .shape-transaction{
-  animation: shake 4s;
-  animation-iteration-count: infinite;
+  animation: trans 2.5s ease-in-out infinite;
 }
-@keyframes shake2{
+@keyframes shake{
   0% {
     bottom:10px;
     opacity: 0;
@@ -246,7 +230,7 @@ export default {
 }
 
 .shape-transaction2{
-  animation: shake2 5s;
+  animation: shake 5s;
   animation-iteration-count: infinite;
 }
 .container .scroll{
@@ -264,28 +248,14 @@ export default {
   background-color: #fff !important;
   display:grid;
   grid-template-columns: auto auto;
-  column-gap: 50px;
+  height:700px;
 }
-/* .about-sec-shape-group{
-  display: flex;
-} */
-#scroll-bottom .titl {
-  font-family:DreamyFont;
-  display: inline-block;
-  padding: 10px;
-  background: linear-gradient(to right, rgb(84, 84, 248), rgb(39, 235, 137));
-  background-clip:text;
-  -webkit-text-fill-color: transparent;
-  }
-.about-header{
-  color:rgb(31, 30, 30);
-}
-.about-paragraph{
-  color:rgb(31, 30, 30);
-}
+
 .about-sec-shape img{
-  margin-top: 40px;
-  height: 55%;
+  position:absolute;
+  bottom:-60%;
+  right:4%;
+  height: 30%;
 }
 .about-sec-shape-group{
   display:flex;
@@ -296,13 +266,14 @@ export default {
   position:absolute;
   border-radius: 50%;
   left:40%;
+  bottom:-60%;
 }
 .circle{
   position: absolute;
   top: 90%;
   left: 20%;
-  /* transform: translate(-50%, -50%); */
-  max-width:250px;
+  transform: translate(-50%, -50%);
+  max-width:150px;
 }
 .ab-circ{
   background: rgba(228, 225, 255, 0.15) !important;
@@ -314,7 +285,7 @@ export default {
 }
 .ab-circ svg{
   height: auto;
-  max-width: 120px;
+  max-width: 80px;
   fill:#5f39ff;
   font-weight:700;
 }
@@ -359,9 +330,96 @@ export default {
   border-radius: 50%;
   padding: 8px;
   left:20%;
+  bottom:-620px;
 }
 .about-img-1 img{
-  width: 210px;
-  height: 210px;
+  width: 280px;
+  height: 280px;
+}
+.about-img-2{
+  position: absolute;
+  -webkit-animation: trans 2.5s ease-in-out infinite;
+  animation: trans 2.5s ease-in-out infinite;
+  border:1px solid #5f39ff;
+  border-radius: 50%;
+  padding: 7px;
+  left:13%;
+  bottom:-660px;
+}
+.about-img-2 img{
+  width: 90px;
+  height: 90px;
+}
+.about-img-3{
+  position: absolute;
+  -webkit-animation: trans 2.5s ease-in-out infinite;
+  animation: trans 2.5s ease-in-out infinite;
+  border:1px solid #5f39ff;
+  border-radius: 50%;
+  padding: 7px;
+  left:35%;
+  bottom:-800px;
+}
+.about-img-3 img{
+  width: 115px;
+  height: 115px;
+}
+.about-img-4{
+  position: absolute;
+  -webkit-animation: trans 2.5s ease-in-out infinite;
+  animation: trans 2.5s ease-in-out infinite;
+  border:1px solid #5f39ff;
+  border-radius: 50%;
+  padding: 7px;
+  left:10%;
+  bottom:-370px;
+}
+.about-img-4 img{
+  width: 150px;
+  height: 150px;
+}
+.about-text{
+  width:550px;
+  position: absolute;
+  left:50%;
+  top:145%;
+}
+
+.about-text .titl {
+  font-family:DreamyFont;
+  font-weight:100;
+  font-size: 2.2rem;
+  display: inline-block;
+  background: linear-gradient(to right, rgb(84, 84, 248), rgb(39, 235, 137));
+  background-clip:text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+  }
+
+.about-text .about-header{
+  color:rgba(31, 30, 30, 0.87);
+  font-family:Cool;
+  font-size: 3rem;
+  margin-top: 0px;
+}
+.about-text .about-paragraph{
+  color:rgba(49, 49, 49, 0.788);
+  line-height: 25px;
+  font-size: 1rem;
+}
+.about-text .about-btn{
+  width:150px;
+  height:55px;
+  border: 1px solid #5f39ff;
+  border-radius: 50px;
+  padding:8px;
+  color: #4416ff;
+  font-size:1.1rem;
+  font-weight: 500;
+  margin-top: 4%;
+}
+.about-text .about-btn:hover{
+  background: linear-gradient(to right, rgb(39, 235, 137), rgb(84, 84, 248));
+  color:#fff;
 }
 </style>
