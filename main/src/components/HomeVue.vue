@@ -91,24 +91,30 @@
       </div>
     </secion>
     <div class="counter-sec">
-          <div class="count-project">
-            <vue3-autocounter class="count" ref='counter' :startAmount='0' :endAmount='254' :duration='3'  suffix='+' :autoinit='true' />
-            <p>Project Complete</p>
-          </div>
-          <div class="team-member">
-            <vue3-autocounter class="count" ref='counter' :startAmount='0' :endAmount='164' :duration='3'  suffix='+' :autoinit='true' />
-            <p>Quality Team Member</p>
-          </div>
-          <div class="award">
-            <vue3-autocounter class="count" ref='counter' :startAmount='0' :endAmount='433' :duration='3'  suffix='+' :autoinit='true' />
-            <p>Awards Wining</p>
-          </div>
-          <div class="experience">
-            <vue3-autocounter class="count" ref='counter' :startAmount='0' :endAmount='30' :duration='3'  suffix='+' :autoinit='true' />
-            <p>Years Of Experience</p>
-          </div>
-        </div>
+      <div class="count-project">
+        <vue3-autocounter class="count" ref='counter' :startAmount='0' :endAmount='254' :duration='3' suffix='+' />
+          <p>Project Complete</p>
+      </div>
+      <div class="team-member">
+        <vue3-autocounter class="count" ref='counter' :startAmount='0' :endAmount='164' :duration='3'  suffix='+' />
+        <p>Quality Team Member</p>
+      </div>
+      <div class="award">
+        <vue3-autocounter class="count" ref='counter' :startAmount='0' :endAmount='433' :duration='3'  suffix='+' />
+        <p>Awards Wining</p>
+      </div>
+      <div class="experience">
+        <vue3-autocounter class="count" ref='counter' :startAmount='0' :endAmount='30' :duration='3'  suffix='+' />
+        <p>Years Of Experience</p>
+      </div>
+      <div class="counter-back-img">
+        <img src="../assets/images/counter-shape.svg" alt="" class="count-img">
+      </div>
+      <div class="counter-back-img2">
+        <img src="../assets/images/counter-shape1.svg" alt="" class="count-img">
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -421,23 +427,39 @@ export default {
 .counter-sec{
   display: grid;
   grid-template-columns:auto auto auto auto;
+  padding-left:70px;
+  padding-right:70px;
 }
 .counter-sec div{
   text-align: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 15%;
+  margin-bottom: 15%;
 }
 .counter-sec .count{
-  /* color:#705fff;
-  border:1px solid #fff; */
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
   line-height: 1;
   font-size:4rem;
   font-weight: 600;
 }
-.counter-sec .count p{
-  font-size:3rem;
-  font-weight: 700;
+.counter-sec p{
+  font-family: Cool;
+  font-size:1.2rem;
+}
+.counter-sec .team-member , .counter-sec .award , .counter-sec .experience{
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.counter-sec .counter-back-img{
+  position: absolute;
+  left:-20px;
+  top:212%;
+}
+.counter-sec .counter-back-img img,.counter-sec .counter-back-img2 img{
+  max-width:90%;
+}
+.counter-sec .counter-back-img2{
+  position: absolute;
+  right:-20px;
+  top:212%;
 }
 </style>
