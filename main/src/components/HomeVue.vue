@@ -58,16 +58,16 @@
           </svg>
           </div>
         </div>
-        <div class="about-img-1">
+        <div class="about-img-1 about-img-animation">
           <img src="../assets/images/about-1.png" alt="">
         </div>
-        <div class="about-img-2">
+        <div class="about-img-2 about-img-animation">
           <img src="../assets/images/about-2.png" alt="">
         </div>
-        <div class="about-img-3">
+        <div class="about-img-3 about-img-animation">
           <img src="../assets/images/about-3.png" alt="">
         </div>
-        <div class="about-img-4">
+        <div class="about-img-4 about-img-animation">
           <img src="../assets/images/about-4.png" alt="">
         </div>
       </div>
@@ -86,18 +86,41 @@
         <p class="about-paragraph">
           by injected humour, or randomised words which don't look even slightly believable.
         </p>
-        <button class="about-btn">Read More</button>
+        <!-- <button class="about-btn">Read More</button> -->
+        <Buttons button-content="Read More"/>
       </div>
     </secion>
-  </div>
+    <div class="counter-sec">
+          <div class="count-project">
+            <vue3-autocounter class="count" ref='counter' :startAmount='0' :endAmount='254' :duration='3'  suffix='+' :autoinit='true' />
+            <p>Project Complete</p>
+          </div>
+          <div class="team-member">
+            <vue3-autocounter class="count" ref='counter' :startAmount='0' :endAmount='164' :duration='3'  suffix='+' :autoinit='true' />
+            <p>Quality Team Member</p>
+          </div>
+          <div class="award">
+            <vue3-autocounter class="count" ref='counter' :startAmount='0' :endAmount='433' :duration='3'  suffix='+' :autoinit='true' />
+            <p>Awards Wining</p>
+          </div>
+          <div class="experience">
+            <vue3-autocounter class="count" ref='counter' :startAmount='0' :endAmount='30' :duration='3'  suffix='+' :autoinit='true' />
+            <p>Years Of Experience</p>
+          </div>
+        </div>
+    </div>
 </template>
 
 <script>
+import Vue3autocounter from 'vue3-autocounter';
 import Navbar from '@/components/NavbarSec.vue'
+import Buttons from '@/components/ButtonVue.vue'
 export default {
   name:'NavbarView',
   components:{
-    Navbar
+    Navbar,
+    Buttons,
+    'vue3-autocounter': Vue3autocounter
   }
 }
 </script>
@@ -322,12 +345,14 @@ export default {
     transform: scale3d(1, 1, 1);
 }
 }
-.about-img-1{
-  position: absolute;
+.about-img-animation{
   -webkit-animation: trans 2.5s ease-in-out infinite;
   animation: trans 2.5s ease-in-out infinite;
+  position: absolute;
   border:1px solid #5f39ff;
   border-radius: 50%;
+}
+.about-img-1{
   padding: 8px;
   left:20%;
   bottom:-620px;
@@ -337,11 +362,6 @@ export default {
   height: 280px;
 }
 .about-img-2{
-  position: absolute;
-  -webkit-animation: trans 2.5s ease-in-out infinite;
-  animation: trans 2.5s ease-in-out infinite;
-  border:1px solid #5f39ff;
-  border-radius: 50%;
   padding: 7px;
   left:13%;
   bottom:-660px;
@@ -351,11 +371,6 @@ export default {
   height: 90px;
 }
 .about-img-3{
-  position: absolute;
-  -webkit-animation: trans 2.5s ease-in-out infinite;
-  animation: trans 2.5s ease-in-out infinite;
-  border:1px solid #5f39ff;
-  border-radius: 50%;
   padding: 7px;
   left:35%;
   bottom:-800px;
@@ -365,11 +380,6 @@ export default {
   height: 115px;
 }
 .about-img-4{
-  position: absolute;
-  -webkit-animation: trans 2.5s ease-in-out infinite;
-  animation: trans 2.5s ease-in-out infinite;
-  border:1px solid #5f39ff;
-  border-radius: 50%;
   padding: 7px;
   left:10%;
   bottom:-370px;
@@ -407,19 +417,27 @@ export default {
   line-height: 25px;
   font-size: 1rem;
 }
-.about-text .about-btn{
-  width:150px;
-  height:55px;
-  border: 1px solid #5f39ff;
-  border-radius: 50px;
-  padding:8px;
-  color: #4416ff;
-  font-size:1.1rem;
-  font-weight: 500;
-  margin-top: 4%;
+
+.counter-sec{
+  display: grid;
+  grid-template-columns:auto auto auto auto;
 }
-.about-text .about-btn:hover{
-  background: linear-gradient(to right, rgb(39, 235, 137), rgb(84, 84, 248));
-  color:#fff;
+.counter-sec div{
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.counter-sec .count{
+  /* color:#705fff;
+  border:1px solid #fff; */
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  line-height: 1;
+  font-size:4rem;
+  font-weight: 600;
+}
+.counter-sec .count p{
+  font-size:3rem;
+  font-weight: 700;
 }
 </style>

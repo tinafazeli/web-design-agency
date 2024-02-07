@@ -89,7 +89,6 @@ ul li{
               linear-gradient(to right, rgb(39, 235, 137), rgb(84, 84, 248) ) border-box;
 }
 .nav-btn p{
-  
   text-align: center;
 }
 </style>
