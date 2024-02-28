@@ -114,6 +114,59 @@
         <img src="../assets/images/counter-shape1.svg" alt="" class="count-img">
       </div>
     </div>
+    <div class="services-sec">
+      <div class="services-description">
+        <div class="serv-head1">
+          <p>Our Services</p>
+          <h2>Service We Provide</h2>
+        </div>
+        <div class="serv-pragraph">
+          <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          It was popularised in the 1960s with the release</p>
+        </div>
+      </div>
+      <div class="services-item">
+        <div class="services-item1">
+          <div class="head-img">
+            <img class="first-img" src="../assets/images/service-image.svg" alt="">
+          </div>
+          <div class="description">
+              <h2>Logo Design</h2>
+              <p>look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum, and a search for</p>
+          </div>
+        </div>
+        <div class="services-item1">
+          <div class="head-img">
+            <img class="second-img" src="../assets/images/service-image.svg" alt="">
+          </div>
+          <div class="description">
+              <h2>Web Design</h2>
+              <p>look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum, and a search for</p>
+          </div>
+        </div>
+        <div class="services-item1">
+          <div class="head-img">
+            <img class="third-img" src="../assets/images/service-image.svg" alt="">
+          </div>
+          <div class="description">
+              <h2>Mobile Apps</h2>
+              <p>look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum, and a search for</p>
+          </div>
+        </div>
+        <div class="services-item1">
+          <div class="head-img">
+            <img class="fourth-img" src="../assets/images/service-image.svg" alt="">
+          </div>
+          <div class="description">
+              <h2>Digital Marketing</h2>
+              <p>look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum, and a search for</p>
+          </div>
+        </div>
+      </div>
+      <div class="services-btn">
+        <P>View Details</P>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -455,11 +508,130 @@ export default {
   top:212%;
 }
 .counter-sec .counter-back-img img,.counter-sec .counter-back-img2 img{
-  max-width:90%;
+  max-width:94%;
 }
 .counter-sec .counter-back-img2{
   position: absolute;
   right:-20px;
   top:212%;
 }
+.services-sec{
+  background: #fff;
+}
+.services-sec .services-description .serv-head1{
+  padding-top: 50px;
+}
+.services-sec .services-description .serv-head1 p{
+  font-family: DreamyFont;
+  font-size:2rem;
+  background: linear-gradient(to right, rgb(84, 84, 248), rgb(39, 235, 137));
+  background-clip:text;
+  -webkit-text-fill-color: transparent;
+  text-align:center;
+  margin-bottom: 4px;
+}
+.services-sec .services-description .serv-head1 h2{
+  font-family: Cool;
+  font-size:3rem;
+  color:rgba(31, 30, 30, 0.87);
+  text-align:center;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.serv-pragraph{
+  color:rgba(44, 44, 44, 0.658);
+  margin-left: 17%;
+}
+.services-sec .services-description .serv-pragraph p{
+  font-family: Ubuntu;
+  font-weight:normal;
+  font-size:1rem;
+  text-align: center;
+  width:75%;
+}
+.services-sec .services-item{
+  display:grid;
+  grid-template-columns:260px 260px 260px 260px; 
+  margin-top:10%;
+  margin-left:130px;
+  margin-right:130px;
+  position:relative;
+}
+
+.services-sec .services-item .services-item1 .head-img img{
+  position: absolute;
+}
+.services-sec .services-item .services-item1 .head-img .first-img{
+left:60px;
+top:-49px;
+}
+
+.services-sec .services-item .services-item1 .head-img .second-img{
+  top:-49px;
+  left:320px;
+}
+
+.services-sec .services-item .services-item1 .head-img .third-img{
+  top:-49px;
+  left:582px;
+}
+
+.services-sec .services-item .services-item1 .head-img .fourth-img{
+  top:-49px;
+  left:840px;
+}
+
+.services-sec .services-item .services-item1 .description{
+  border-radius: 20px;
+  border:2px solid #f8f7ff;
+  width:220px;
+  height:290px;
+  text-align:center;
+  background-color: #f8f7ff;
+}
+.services-sec .services-item .services-item1 .description:hover{
+  border: 2px solid transparent;
+  background: 
+        linear-gradient(to right, #f8f7ff, #f8f7ff), 
+        linear-gradient(90deg,#20d9a1,#5f39ff); 
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  box-shadow: 9px 8px 20px rgb(214, 214, 214);
+}
+.services-sec .services-item .services-item1 .description h2{
+  font-family:Cool;
+  font-size:1.2rem;
+  color:#3a3a3a;
+  padding-top: 60px;
+}
+.services-sec .services-item .services-item1 .description p{
+  font-family: Ubuntu;
+  width:180px;
+  color:#727272;
+  margin-left: 20px;
+  line-height: 22px;
+}
+.services-sec .services-btn{
+  margin-top: 2%;
+  margin-left: 40%;
+  transition-duration: 5s;
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(to right, rgb(39, 235, 137), rgb(84, 84, 248) ) border-box;
+  border-radius: 50px;
+  border: 1px solid transparent;
+  width: 12%;
+  height: 50px;
+}
+.services-sec .services-btn:hover{
+  background: linear-gradient(to right, rgb(39, 235, 137), rgb(84, 84, 248)) padding-box,
+              linear-gradient(to right, rgb(39, 235, 137), rgb(84, 84, 248) ) border-box;
+}
+.services-sec .services-btn p{
+  text-align: center;
+  background: linear-gradient(to right, rgb(84, 84, 248), rgb(39, 235, 137));
+  background-clip:text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 </style>

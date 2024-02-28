@@ -11,6 +11,10 @@
     font-family: Cool;
     src: url('assets/fonts/Ubuntu-Bold.ttf');
 }
+@font-face {
+    font-family: Ubuntu;
+    src: url('assets/fonts/Ubuntu-Regular.ttf');
+}
 html{
     scroll-padding-top: 9rem;
 }
