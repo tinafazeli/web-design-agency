@@ -129,6 +129,8 @@
         <div class="services-item1">
           <div class="head-img">
             <img class="first-img" src="../assets/images/service-image.svg" alt="">
+            <!-- <i class="fa fa-pencil" aria-hidden="true"></i> -->
+            <img src="../assets/images/pen.png" alt="" class="services-logo1">
           </div>
           <div class="description">
               <h2>Logo Design</h2>
@@ -138,6 +140,7 @@
         <div class="services-item1">
           <div class="head-img">
             <img class="second-img" src="../assets/images/service-image.svg" alt="">
+            <img src="../assets/images/computer.png" alt="" class="services-logo2">
           </div>
           <div class="description">
               <h2>Web Design</h2>
@@ -147,6 +150,7 @@
         <div class="services-item1">
           <div class="head-img">
             <img class="third-img" src="../assets/images/service-image.svg" alt="">
+            <img src="../assets/images/code.png" alt="" class="services-logo3">
           </div>
           <div class="description">
               <h2>Mobile Apps</h2>
@@ -565,17 +569,34 @@ export default {
 left:60px;
 top:-49px;
 }
-
+.services-sec .services-item .services-item1 .head-img .services-logo1{
+  /* color:#ffff; */
+  width:50px;
+  height:50px;
+  left:87px;
+  top:-28px;
+}
 .services-sec .services-item .services-item1 .head-img .second-img{
   top:-49px;
   left:320px;
 }
-
+.services-sec .services-item .services-item1 .head-img .services-logo2{
+  width:50px;
+  height:50px;
+  left:342px;
+  top:-28px;
+}
 .services-sec .services-item .services-item1 .head-img .third-img{
   top:-49px;
   left:582px;
 }
 
+.services-sec .services-item .services-item1 .head-img .services-logo3{
+  width:40px;
+  height:40px;
+  left:600px;
+  top:-28px;
+}
 .services-sec .services-item .services-item1 .head-img .fourth-img{
   top:-49px;
   left:840px;
@@ -587,7 +608,8 @@ top:-49px;
   width:220px;
   height:290px;
   text-align:center;
-  background-color: #f8f7ff;
+  /* background-color: #f8f7ff; */
+  background-color: #f0eef7e5;
 }
 .services-sec .services-item .services-item1 .description:hover{
   border: 2px solid transparent;
